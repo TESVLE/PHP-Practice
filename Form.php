@@ -11,7 +11,7 @@
 
  <link rel="stylesheet" href="comreg_files/formoid1/formoid-biz-red.css" type="text/css" />
  <script type="text/javascript" src="comreg_files/formoid1/jquery.min.js"></script>
- <form class="formoid-biz-red" style="background-color:#1A2223;font-size:14px;font-family:'Open Sans','Helvetica Neue', 'Helvetica', Arial, Verdana, sans-serif;color:#ECECEC;max-width:480px;min-width:150px" method="get" action="practice.php"><div class="title"><h2>Commissioner Account Creation</h2></div>
+ <form class="formoid-biz-red" style="background-color:#1A2223;font-size:14px;font-family:'Open Sans','Helvetica Neue', 'Helvetica', Arial, Verdana, sans-serif;color:#ECECEC;max-width:480px;min-width:150px" method="post" action="practice.php"><div class="title"><h2>Commissioner Account Creation</h2></div>
  	<div class="element-input"><label class="title"><span class="required">*</span></label><input class="large" type="text" name="username" required="required" placeholder="Username"/></div>
  	<div class="element-email"><label class="title"><span class="required">*</span></label><input class="large" type="email" name="email" value="" required="required" placeholder="Email"/></div>
  	<div class="element-password"><label class="title"><span class="required">*</span></label><input class="large" type="password" name="password" value="" required="required" placeholder="Password"/></div>
