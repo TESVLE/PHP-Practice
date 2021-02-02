@@ -1,0 +1,43 @@
+RewriteEngine on
+Header always append X-Frame-Options SAMEORIGIN
+<IfModule mod_headers.c>
+Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+Header set Content-Security-Policy "default-src 'self' data: 'unsafe-inline' 'unsafe-hashes' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://www.google-analytics.com https://www.youtu.be https://www.cloudflare.com https://mobirise.com https://ajax.cloudflare.com https://google.com https://googleads.g.doubleclick.net/pagead/id https://youtube.com/s/player/27cea338/www-widgetapi.vflset https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js:1 https://img.youtube.com/vi/E4xkWd1Yiiw/maxresdefault.jpg  https://img.youtube.com/vi/E4xkWd1Yiiw/maxresdefault.jpg https://fonts.googleapis.com https://youtube.com/iframe_api?v=3.0.20 https://fonts.gstatic.com https://youtube.com/s/player/27cea338/www-widgetapi.vflset/www-widgetapi.js https://static.cloudflareinsights.com/beacon.min.js https://marckroswell.art/404javascript.js https://marckroswell.art/404testpage4525d2fdc https://www.youtube.com/s/player/c6df6ed7/www-widgetapi.vflset/www-widgetapi.js https://www.youtube.com/iframe_api?v=3.0.20 https://www.youtube.com/embed https://mobile.marckroswell.art https://mobile.marckroswell.art/assets;"
+
+Options -Indexes
+
+RewriteCond %{HTTP_REFERER} !^http://dashboard.marckroswell.art/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://dashboard.marckroswell.art$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://marckroswell.art/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://marckroswell.art$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://mobile.marckroswell.art/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://mobile.marckroswell.art$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://shop.marckroswell.art/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://shop.marckroswell.art$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.dashboard.marckroswell.art/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.dashboard.marckroswell.art$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.marckroswell.art/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.marckroswell.art$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.mobile.marckroswell.art/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.mobile.marckroswell.art$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.shop.marckroswell.art/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.shop.marckroswell.art$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://dashboard.marckroswell.art/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://dashboard.marckroswell.art$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://marckroswell.art/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://marckroswell.art$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://mobile.marckroswell.art/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://mobile.marckroswell.art$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://shop.marckroswell.art/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://shop.marckroswell.art$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.dashboard.marckroswell.art/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.dashboard.marckroswell.art$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.marckroswell.art/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.marckroswell.art$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.mobile.marckroswell.art/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.mobile.marckroswell.art$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.shop.marckroswell.art/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.shop.marckroswell.art$      [NC]
+RewriteRule .*\.(jpg|jpeg|gif|png|bmp|webp)$ - [F,NC]
